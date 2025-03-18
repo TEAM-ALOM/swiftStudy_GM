@@ -1,14 +1,14 @@
 //
-//  week2_StructApp.swift
-//  week2_Struct
+//  Week2_structApp.swift
+//  Week2_struct
 //
-//  Created by 이건무 on 3/15/25.
+//  Created by 이건무 on 3/18/25.
 //
 
 import SwiftUI
 
 @main
-struct week2_StructApp: App {
+struct Week2_structApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
