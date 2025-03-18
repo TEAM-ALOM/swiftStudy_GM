@@ -18,48 +18,54 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-struct Dayforecast: View {
-    let day : String
-    let high : Int
-    let low : Int
-    let isRainy: Bool
-    var iconColor : Color{
-        if isRainy{
+
+struct Dayforecast: View {  //구조체 생성
+    let day : String    // 변경될 수 있는 string 형태의 변수 day
+    let high : Int      // 변경될 수 있는 int 형태의 변수 high
+    let low : Int      // 변경될 수 있는 int 형태의 변수 low
+    let isRainy: Bool  // 변경될 수 있는 bool 형태의 변수 isRainy
+    
+    var iconColor : Color{  //아이콘 색변경
+        if isRainy{     //bool값
             return Color.blue
         }else{
             return Color.yellow
         }
     }
-    var iconName : String {
+    
+    var iconName : String { //아이콘 지정
         if isRainy{
-            return "cloud.rain.fill"
+            return "cloud.rain.fill"  //구름 아이콘
         }else{
-            return "sun.max.fill"
+            return "sun.max.fill"  //태양 아이콘
         }
     }
+    
+    
     var body: some View {
         VStack {
             Text(day)
-                .font(Font.headline)
-            Image(systemName: iconName)
-                .foregroundStyle(iconColor)
-                .font(Font.largeTitle)
-                .padding(5)
-            Text("High:\(high)")
-                .fontWeight(Font.Weight.semibold)
-            Text("Low:\(low)")
-                .fontWeight(Font.Weight.medium)
-                .foregroundStyle(Color.secondary)
+                .font(Font.headline) //폰트 변경
+            Image(systemName: iconName)  //아이콘 불러오기
+                .foregroundStyle(iconColor)  //아이콘 컬러 설정
+                .font(Font.largeTitle)    //아이콘 크기 변경
+                .padding(5)    //여백추가
+            Text("High:\(high)") //구조체에서 high불러오기
+                .fontWeight(Font.Weight.semibold) //high 폰트 변경
+            Text("Low:\(low)")  //구조체에 low불러오기
+                .fontWeight(Font.Weight.medium) //low 폰트 변경
+                .foregroundStyle(Color.secondary) //low color 변경
         }
         .padding()
     }
+}
+
+//프리뷰 실행
+#Preview {
+    ContentView()
 }
