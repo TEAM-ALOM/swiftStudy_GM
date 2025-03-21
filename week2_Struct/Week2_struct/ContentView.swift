@@ -25,10 +25,10 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct Dayforecast: View {  //구조체 생성
-    let day : String    // 변경될 수 있는 string 형태의 변수 day
-    let high : Int      // 변경될 수 있는 int 형태의 변수 high
-    let low : Int      // 변경될 수 있는 int 형태의 변수 low
-    let isRainy: Bool  // 변경될 수 있는 bool 형태의 변수 isRainy
+    let day : String    // 재할당 불가능한 string 형태의 상수 day
+    let high : Int      // 재할당 불가능한 int 형태의 상수 high
+    let low : Int      // 재할당 불가능한 int 형태의 상수 low
+    let isRainy: Bool  // 재할당 불가능한 bool 형태의 상수 isRainy
     
     var iconColor : Color{  //아이콘 색변경
         if isRainy{     //bool값
