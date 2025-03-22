@@ -18,12 +18,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 struct Dayforecast: View {  //구조체 생성
     let day : String    // 재할당 불가능한 string 형태의 상수 day
     let high : Int      // 재할당 불가능한 int 형태의 상수 high
