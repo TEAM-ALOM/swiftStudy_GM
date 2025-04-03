@@ -26,6 +26,7 @@ struct ContentView: View {
                     Button("Remove Dice",systemImage: "minus.circle.fill"){ //다이스를 지우는 버튼
                         withAnimation{  //매끄러운 변경
                             numberOfDice -= 1
+                            if numberOfDice < 0 { numberOfDice = 0} // RemoveDice 버튼을 연타하면 numberofdice가 음수 값이 되는 것을 방지
                         }
                     }
                     .disabled(numberOfDice == 0) // 다이스 개수 최소치 설정
